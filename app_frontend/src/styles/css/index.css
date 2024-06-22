@@ -1,0 +1,41 @@
+@font-face {
+  font-family: rubik;
+  src: url("../../assets/font/Rubik-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: rubik;
+}
+
+.container {
+  padding-inline: 2em;
+}
+.container .btn {
+  font-family: rubik;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  background: #ed4400;
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+.container .btn:hover {
+  background: #ed4400;
+}
+.container .form {
+  margin-top: 5em;
+}
+.container .form h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+.container .form p {
+  color: rgb(167, 164, 164);
+  font-size: 0.9em;
+}
+.container .form a {
+  text-decoration: none;
+  color: #ed4400;
+}

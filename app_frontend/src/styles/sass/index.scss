@@ -1,0 +1,52 @@
+// @import "./_variables";
+@import "./variables";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: $rubik;
+}
+
+.container {
+	padding-inline: 2em;
+
+	.btn {
+		font-family: $rubik;
+		text-transform: capitalize;
+		letter-spacing: 1px;
+		background: $dark-orange;
+		padding: 1em;
+		border-radius: 1em;
+		margin-top: 1em;
+
+		&:hover {
+			background: $dark-orange;
+		}
+	}
+
+	.form {
+		margin-top: 5em;
+
+		h2 {
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+		p {
+			color: rgb(167, 164, 164);
+			font-size: 0.9em;
+		}
+
+		a {
+			text-decoration: none;
+			color: $dark-orange;
+		}
+	}
+
+	// .form {
+	// 	input {
+	// 		// border-radius: 4em;
+	// 	}
+	// }
+}
