@@ -11,12 +11,12 @@ const usePost = (url) => {
 					"Content-Type": "application/json",
 				},
 			});
-			console.log(response.data);
+			response.status === 200 && setIsLoading(false);
 			return response.data;
 		} catch (error) {
-			console.log(error.message);
+			setIsLoading(false);
+			throw error.response.data;
 		}
-		setIsLoading(false);
 	};
 	return { post, isLoading };
 };

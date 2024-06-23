@@ -18,7 +18,7 @@ userSchema.pre("save", async function (next) {
 userSchema.statics.login = async function (admission, password) {
 	try {
 		const user = await this.findOne({ admission });
-		const auth = await bcrypt.compare(password, user.password);
+		const auth = await bcrypt.compare(password, user?.password);
 
 		if (auth) return user;
 		else throw new Error("Incorrect creadentials");

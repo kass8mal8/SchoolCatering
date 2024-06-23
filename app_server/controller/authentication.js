@@ -27,7 +27,7 @@ const signin = async (req, res) => {
 	try {
 		const user = await User.login(admission, password);
 
-		const token = createToken(user.name, user.admission);
+		const token = createToken({ name: user.name, admission: user.admission });
 
 		res.json({ token, message: "Signin was successful" }).status(200);
 	} catch (error) {
