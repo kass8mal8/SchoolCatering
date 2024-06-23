@@ -1,9 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Button, Box, Typography } from "@mui/material";
+import { Button, Typography, Box } from "@mui/material";
 import Inputs from "./Inputs";
 import { Link } from "react-router-dom";
 import usePost from "../hooks/usePost";
 import { useState } from "react";
+import Hero from "./Hero";
+import chef from "../assets/images/chef.jpg";
 
 const Signin = () => {
 	const url = "http://localhost:3000/api/auth/signup";
@@ -30,19 +32,21 @@ const Signin = () => {
 		await post(userData);
 	};
 	return (
-		<form className="form" onSubmit={handleSubmit}>
-			<Box sx={{ textAlign: "center", my: 3 }}>
-				<Typography variant="h2">Sign in</Typography>
-				<Typography variant="body1">Enter your details to sign in</Typography>
+		<Box sx={{ background: "#f5672f", position: "relative" }}>
+			<Box sx={{ mt: -3 }}>
+				<img src={chef} alt="chef" width={"100%"} style={{ opacity: 0.7 }} />
 			</Box>
-			<Inputs handleChange={handleChange} errorMessage={errorMessage} />
-			<Button variant="contained" disableElevation fullWidth className="btn">
-				signin
-			</Button>
-			<Typography sx={{ my: 3 }}>
-				Don't have an account? <Link to="/signup">Sign up</Link>
-			</Typography>
-		</form>
+			<form className="form" onSubmit={handleSubmit}>
+				<Hero />
+				<Inputs handleChange={handleChange} errorMessage={errorMessage} />
+				<Button variant="contained" disableElevation fullWidth className="btn">
+					sign in
+				</Button>
+				<Typography sx={{ position: "absolute", bottom: 20 }}>
+					Don't have an account? <Link to="/signup">Sign up</Link>
+				</Typography>
+			</form>
+		</Box>
 	);
 };
 

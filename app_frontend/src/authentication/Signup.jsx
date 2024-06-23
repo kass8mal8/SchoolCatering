@@ -1,7 +1,9 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import Inputs from "./Inputs";
 import usePost from "../hooks/usePost";
 import { useState } from "react";
+import chef from "../assets/images/chef.jpg";
+import Hero from "./Hero";
 
 const Signup = () => {
 	const url = "http://localhost:3000/api/auth/signup";
@@ -30,39 +32,44 @@ const Signup = () => {
 	};
 
 	return (
-		<form className="form" onSubmit={handleSubmit}>
-			<Box sx={{ textAlign: "center", my: 3 }}>
-				<Typography variant="h2">Sign up</Typography>
-				<Typography variant="body1">Enter your details to sign up</Typography>
+		<Box sx={{ background: "#f5672f" }}>
+			<Box sx={{ mt: -3 }}>
+				<img src={chef} alt="chef" width={"100%"} style={{ opacity: 0.7 }} />
 			</Box>
-			<TextField
-				name="name"
-				fullWidth
-				placeholder="Your Name"
-				required
-				onChange={handleChange}
-				sx={{
-					"& fieldset": {
-						borderWidth: "2px", // Change the border width here
-					},
-					my: 2,
-					"& .MuiOutlinedInput-root": {
-						borderRadius: "1em", // Change the border radius here
-					},
-				}}
-			/>
-			<Inputs handleChange={handleChange} errorMessage={errorMessage} />
+			<form className="form" onSubmit={handleSubmit}>
+				<Hero />
+				<TextField
+					name="name"
+					fullWidth
+					placeholder="Your Name"
+					required
+					onChange={handleChange}
+					sx={{
+						"& fieldset": {
+							borderWidth: "2px", // Change the border width here
+						},
+						"&:focus-within fieldset, &:focus-visible fieldset": {
+							border: "2px solid #f5672f!important",
+						},
+						my: 2,
+						"& .MuiOutlinedInput-root": {
+							borderRadius: "1em", // Change the border radius here
+						},
+					}}
+				/>
+				<Inputs handleChange={handleChange} errorMessage={errorMessage} />
 
-			<Button
-				variant="contained"
-				type="submit"
-				disableElevation
-				fullWidth
-				className="btn"
-			>
-				sign up
-			</Button>
-		</form>
+				<Button
+					variant="contained"
+					type="submit"
+					disableElevation
+					fullWidth
+					className="btn"
+				>
+					sign up
+				</Button>
+			</form>
+		</Box>
 	);
 };
 

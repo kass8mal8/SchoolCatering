@@ -9,33 +9,34 @@
   font-family: rubik;
 }
 
-.container {
-  padding-inline: 2em;
-}
 .container .btn {
   font-family: rubik;
   text-transform: capitalize;
   letter-spacing: 1px;
-  background: #ed4400;
+  background: #f5672f;
   padding: 1em;
   border-radius: 1em;
   margin-top: 1em;
 }
 .container .btn:hover {
-  background: #ed4400;
+  background: #f5672f;
 }
 .container .form {
-  margin-top: 5em;
-}
-.container .form h2 {
-  font-size: 2em;
-  font-weight: bold;
+  background: whitesmoke;
+  padding-inline: 2rem;
+  padding-block: 1px;
+  margin-top: -4em;
+  z-index: 2;
+  position: relative;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  height: 70lvh;
 }
 .container .form p {
   color: rgb(167, 164, 164);
-  font-size: 0.9em;
+  font-size: 1em;
 }
 .container .form a {
   text-decoration: none;
-  color: #ed4400;
+  color: #f5672f;
 }

@@ -16,7 +16,10 @@ const Inputs = ({ handleChange, errorMessage }) => {
 				helperText={errorMessage}
 				sx={{
 					"& fieldset": {
-						borderWidth: "2px", // Change the border width here
+						borderWidth: "2px",
+					},
+					"&:focus-within fieldset, &:focus-visible fieldset": {
+						border: "2px solid #f5672f!important",
 					},
 					"& .MuiOutlinedInput-root": {
 						borderRadius: "1em", // Change the border radius here
@@ -37,6 +40,9 @@ const Inputs = ({ handleChange, errorMessage }) => {
 					},
 					"& .MuiOutlinedInput-root": {
 						borderRadius: "1em",
+					},
+					"&:focus-within fieldset, &:focus-visible fieldset": {
+						border: "2px solid #f5672f!important",
 					},
 				}}
 				InputProps={{
