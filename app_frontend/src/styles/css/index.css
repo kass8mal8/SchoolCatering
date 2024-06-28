@@ -7,9 +7,57 @@
   margin: 0;
   box-sizing: border-box;
   font-family: rubik;
+  color: rgb(36, 35, 35);
 }
 
-.container .btn {
+.wrapper .header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  padding-inline: 1.2em;
+  padding-block: 0.5em;
+}
+.wrapper .header img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.wrapper .bottom-nav {
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  z-index: 100;
+  display: flex;
+  background: #ececec;
+  justify-content: space-between;
+  width: 95lvw;
+  padding: 10px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.wrapper .hero {
+  background: url(../../assets/images/illustration.jpg) no-repeat;
+  background-size: cover;
+  height: 180px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.wrapper .container {
+  position: relative;
+  padding-inline: 1.2em;
+}
+.wrapper .container a {
+  text-decoration: none;
+  background: #ececec;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.wrapper .btn {
   font-family: rubik;
   text-transform: capitalize;
   letter-spacing: 1px;
@@ -18,10 +66,10 @@
   border-radius: 1em;
   margin-top: 1em;
 }
-.container .btn:hover {
+.wrapper .btn:hover {
   background: #f5672f;
 }
-.container .form {
+.wrapper .form {
   background: whitesmoke;
   padding-inline: 2rem;
   padding-block: 1px;
@@ -32,11 +80,11 @@
   border-top-right-radius: 2em;
   height: 70lvh;
 }
-.container .form p {
+.wrapper .form p {
   color: rgb(167, 164, 164);
   font-size: 1em;
 }
-.container .form a {
+.wrapper .form a {
   text-decoration: none;
   color: #f5672f;
 }
