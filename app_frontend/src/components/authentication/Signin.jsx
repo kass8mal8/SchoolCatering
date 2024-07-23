@@ -40,8 +40,8 @@ const Signin = () => {
 		e.preventDefault();
 		try {
 			const res = await post(userData);
-			console.log(res);
-			localStorage.setItem("jwt", res?.token);
+
+			localStorage.setItem("jwtToken", res?.token);
 		} catch (error) {
 			setOpen(true);
 			setError(error.message);

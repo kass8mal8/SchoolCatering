@@ -31,7 +31,7 @@
 
 	.bottom-nav {
 		position: absolute;
-		bottom: 0;
+		bottom: 10px;
 		margin-left: 10px;
 		z-index: 100;
 		display: flex;
@@ -39,8 +39,13 @@
 		justify-content: space-between;
 		width: 95lvw;
 		padding: 10px;
-		border-top-right-radius: 15px;
-		border-top-left-radius: 15px;
+		border-radius: 15px;
+
+		img {
+			background: $dark-orange;
+			padding: 10px;
+			border-radius: 50%;
+		}
 	}
 	.hero {
 		background: url(../../assets/images/illustration.jpg) no-repeat;
@@ -99,10 +104,4 @@
 			color: $dark-orange;
 		}
 	}
-
-	// .form {
-	// 	input {
-	// 		// border-radius: 4em;
-	// 	}
-	// }
 }

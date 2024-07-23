@@ -29,7 +29,7 @@
 }
 .wrapper .bottom-nav {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   margin-left: 10px;
   z-index: 100;
   display: flex;
@@ -37,8 +37,12 @@
   justify-content: space-between;
   width: 95lvw;
   padding: 10px;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  border-radius: 15px;
+}
+.wrapper .bottom-nav img {
+  background: #f5672f;
+  padding: 10px;
+  border-radius: 50%;
 }
 .wrapper .hero {
   background: url(../../assets/images/illustration.jpg) no-repeat;

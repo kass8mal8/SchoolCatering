@@ -37,7 +37,7 @@ const Signup = () => {
 
 		try {
 			const res = await post(userData);
-			localStorage.setItem("jwt", res?.data);
+			localStorage.setItem("jwtToken", res?.data);
 			navigate("/signin");
 		} catch (error) {
 			setOpen(true);

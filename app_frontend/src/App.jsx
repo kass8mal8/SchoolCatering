@@ -17,12 +17,14 @@ function App() {
 
 	const { setUser } = useContext(AuthContext);
 	useEffect(() => {
-		const jwt = localStorage.getItem("jwt");
-		const authToken = jwt.split(":");
-		const decoded = jwtDecode(authToken[0]);
+		const jwt = localStorage.getItem("jwtToken");
 
-		setUser(decoded);
-	}, []);
+		if (jwt) {
+			const authToken = jwt?.split(":");
+			const decoded = jwtDecode(authToken[0]);
+			setUser(decoded);
+		}
+	}, [setUser]);
 
 	return (
 		<ThemeProvider theme={theme}>
