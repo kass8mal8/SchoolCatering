@@ -3,8 +3,13 @@ import { Link } from "react-router-dom";
 
 const Main = () => {
 	return (
-		<Box mt={2}>
-			<Stack direction="row" sx={{ justifyContent: "space-between" }}>
+		<Box mt={4}>
+			<Stack
+				direction="row"
+				spacing={2}
+				sx={{ justifyContent: "space-between" }}
+				className="intro"
+			>
 				<Link to="#" className="link">
 					Breakfast
 				</Link>

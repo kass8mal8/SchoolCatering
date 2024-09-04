@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Typography, Box } from "@mui/material";
 import Inputs from "./Inputs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import usePost from "../hooks/usePost";
 import { useState } from "react";
 import Hero from "./Hero";
@@ -17,6 +17,7 @@ const Signin = () => {
 	const pattern = /^[a-zA-Z]{3,4}-\d{3}-\d{3}\/\d{4}$/;
 	const [open, setOpen] = useState(false);
 	const [error, setError] = useState(null);
+	const navigate = useNavigate();
 
 	const handleChange = (e) => {
 		if (e.target.name === "admission") {
@@ -41,7 +42,10 @@ const Signin = () => {
 		try {
 			const res = await post(userData);
 
-			localStorage.setItem("jwtToken", res?.token);
+			if (res) {
+				localStorage.setItem("jwtToken", res.token);
+				navigate("/");
+			}
 		} catch (error) {
 			setOpen(true);
 			setError(error.message);

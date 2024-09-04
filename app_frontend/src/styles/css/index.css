@@ -55,11 +55,22 @@
   position: relative;
   padding-inline: 1.2em;
 }
-.wrapper .container a {
+.wrapper .container .intro {
+  overflow-x: scroll;
+  width: 100vw;
+  margin-left: -1.2rem;
+  scroll-snap-type: mandatory;
+  padding-left: 1.2rem;
+  padding-right: 1rem;
+}
+.wrapper .container .intro a {
   text-decoration: none;
   background: #ececec;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 5rem 5rem;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: larger;
+  color: #f5672f;
 }
 .wrapper .btn {
   font-family: rubik;
@@ -91,4 +102,9 @@
 .wrapper .form a {
   text-decoration: none;
   color: #f5672f;
+}
+.wrapper .link {
+  padding-block: 20px;
+  padding-inline: 30px;
+  background-color: red;
 }
