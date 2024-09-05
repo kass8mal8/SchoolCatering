@@ -1,10 +1,15 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
+const options = {
+	type: String,
+	required: true,
+};
+
 const userSchema = new Schema({
-	name: String,
+	name: options,
 	admission: { type: String, required: true, unique: true },
-	password: { type: String, required: true },
+	password: options,
 });
 
 // Hash user password before saving it to DB
